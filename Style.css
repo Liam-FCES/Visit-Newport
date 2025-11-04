@@ -1,0 +1,246 @@
+html, body {
+    color: white;
+    background-color: rgb(92, 94, 46);
+    overflow-x: hidden;
+}
+
+
+
+.navbar {
+    min-height: 102px;
+    transition: background-color 0.5s ease;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+.navbar:hover {
+    background-color: rgb(92, 94, 46);
+    transition: background-color 0s ease;
+}
+
+.navbar-brand {
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    /* position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; */
+    gap: 2rem;
+    font-size: large;
+}
+
+
+
+.nav-link {
+    text-align: center;
+}
+
+
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -102px;
+}
+
+.vid-overlay {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 10em;
+    font-weight: bold;
+    color: white;
+}
+
+.Promotional_Video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    z-index: 0;
+}
+
+/* Horizontal scroll container */
+.card-slide-container .card-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Hide default scrollbar for modern browsers */
+.card-slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.card-slider::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.card-slider::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Each card styling */
+.card-slider .card {
+    /* use responsive min-width so cards shrink on small screens */
+    min-width: 280px;
+    max-width: 400px;
+    width: calc(33.333% - 1rem);
+    /* default 3-per-row feel when space allows */
+    margin-right: 1rem;
+    flex: 0 0 auto;
+    transition: transform 0.3s;
+}
+
+/* Optional: hover effect for cards */
+.card-slider .card:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+/* If .card is an anchor, keep card styles and make it accessible */
+.card-slider a.card {
+    display: block;
+    /* ensure whole card is clickable */
+    color: inherit;
+    /* preserve text color */
+    color: black;
+    text-decoration: none;
+    /* remove underline */
+}
+
+.card-slider a.card:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.6);
+    outline-offset: 4px;
+}
+
+/* Dummy card styling */
+.card-dummy {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.container-fluid .card-slide-container {
+    /* allow horizontal scrolling for the inner .card-slider */
+    overflow: visible;
+    /* let the scrollable child manage overflow */
+    max-width: 100%;
+    padding-left: 1rem;
+    /* give some breathing room on small screens */
+    padding-right: 1rem;
+}
+
+/* Ensure card images don't overflow their card and scale responsively */
+.card .card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Make the slider container full-bleed and hide vertical overflow */
+.card-slide-container {
+    /* contained within the grid/column including offsets */
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    /* small breathing room so offset doesn't clip card edges */
+    padding-right: 0.5rem;
+    overflow: visible;
+    /* inner .card-slider handles horizontal scroll */
+}
+
+.card-slide-container a {
+    text-decoration: none;
+    /* remove underline from links */
+}
+
+/* Responsive rules */
+@media (max-width: 767.98px) {
+    .card-slider .card {
+        min-width: 90vw;
+        width: 90vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .card-slider .card {
+        min-width: 45vw;
+        width: 45vw;
+    }
+}
+
+.card {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    max-width: 102.8%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-section {
+    padding: 0%;
+    font-size: x-large;
+    color: white;
+}
+
+.footer-section h5 {
+    font-size: x-large;
+    text-align: center;
+}
+
+.footer-form input  {
+    background-color: rgb(92, 94, 46);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+.footer-form textarea  {
+    background-color: rgb(92, 94, 46);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav .nav-item .nav-link {
+    color: white;
+}
+
+.attraction-Images {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.attraction-title {
+    font-size: 250%;
+    font-weight: 900;
+    color: white;
+    margin-top: 1rem;
+}
+
+.attraction-text {
+    font-size: 120%;
+    margin-top: 0.5rem;
+    color: white;
+    text-align: justify;
+}
